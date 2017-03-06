@@ -12,13 +12,16 @@ class alumno(models.Model):
 	tutorias = models.CharField(max_length=5)
 
 	def __str__(self):
-		return self.numControl + ' - ' + self.nombre 
+		return str(self.numControl) + ' - ' + self.nombre 
 
 class alumnosAcreditados(models.Model):
 	numControl = models.IntegerField(primary_key=True)
 	nombre = models.CharField(max_length=50)
 	carrera = models.CharField(max_length=50)
 	fechaTerminacion = models.CharField(max_length=45)
+
+	def __str__(self):
+		return str(self.numControl) + ' - ' + self.carrera
 
 class alumnosPendientes(models.Model):
 	numControl = models.IntegerField(primary_key=True)

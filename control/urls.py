@@ -6,5 +6,5 @@ urlpatterns = [
 	url(r'^$', views.index, name='index'),
 
 	#/control/1211/
-	url(r'^(?P<alumno_id>[0-9]+)$', views.detail, name='detail'),
+	url(r'^(?P<numControl>[0-9]+)/$', views.detail, name='detail'),
 ]
